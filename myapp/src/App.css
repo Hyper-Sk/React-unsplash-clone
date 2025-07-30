@@ -1,0 +1,275 @@
+.heading{
+  padding: 20px 15px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.heading h1{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.heading .logo{
+  width: 30px;
+  margin-right: 10px;
+}
+.heading p{
+}
+
+
+
+/* ------ search input area  */
+
+
+.search-area{
+  padding: 0rem 15px 0px;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.search-area img{
+  width: 100%;
+}
+
+.search-area .text-field{
+  background-color: rgb(237, 237, 237);
+  display: flex;
+  border-radius: 50px;
+  position: relative;
+}
+.search-area .text-field input{
+  width: 80%;
+  height: 45px;
+  padding-inline: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+.search-area .text-field button{
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.search-area .text-field button i{
+  font-size: 20px;
+}
+
+
+
+
+/* ----- section suggestion  */
+
+.suggestions{
+  padding: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.suggestions .suggestion{
+  padding: 5px 8px;
+  border: 2px solid gray;
+  border-radius: 7px;
+  cursor: pointer;
+  color: gray;
+  font-size: 14px;
+}
+.suggestions .suggestion:hover{
+  border: 2px solid var(--bg-dark);
+  color: var(--bg-dark);
+}
+
+
+/* -------- result Images  */
+
+
+
+.result-container{
+  padding: 0rem 15px 2rem;
+}
+
+.result-container .loadmore{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.result-container .loadmore button{
+  padding: 0 30px;
+  background-color: var(--bg-dark);
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+}
+
+
+
+
+.result-container .result-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin-inline: auto;
+  gap: 10px;
+}
+
+.result-content .image{
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+}
+
+
+.result-content .image img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.result-content .image p{
+  position: absolute;
+  top: 10px;
+  font-size: 10px;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  padding: 5px 7px;
+  border-radius: 5px;
+  left: 10px;
+}
+
+.result-content .image .buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.result-content .image .buttons a{
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  display: block;
+  background-color: #272727;
+  text-align: center;
+  font-size: 14px;
+}
+.result-content .image .buttons a i{
+  font-size: 16px;
+  margin-right: 3px;
+  color: white;
+}
+.result-content .image .buttons a:hover{
+  background-color: #fff;
+  color: var(--bg-dark);
+}
+.result-content .image .buttons a:hover i{
+  color: var(--bg-dark);
+}
+
+
+/* --- load more  */
+
+
+.result-container .loadmore{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.result-container .loadmore button{
+  padding: 0 15px;
+  background-color: white;
+  color: var(--bg-dark);
+  cursor: pointer;
+  height: 50px;
+}
+.result-container .loadmore button i{
+  font-size: 25px;
+}
+.result-container .loadmore p{
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+
+
+
+footer{
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer p{
+  padding: 5px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+footer p a{
+  color: white;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width:576px) {
+  .heading h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .heading .logo{
+    width: 30px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width:576px) {
+  .search-area{
+    /* padding: 0rem 10px 1rem; */
+  }
+ 
+}
+@media screen and (max-width:1000px) {
+  .result-content .image img{
+    height: 250px;
+  }
+}
+@media screen and (max-width:768px) {
+  .result-container .result-content{
+    grid-template-columns: 1fr 1fr ;
+  }
+  .result-content .image img{
+    height: 250px;
+  }
+}
+@media screen and (max-width:576px) {
+  .heading h1{
+    font-size: 28px;
+  }
+  
+  .result-container .result-content{
+    grid-template-columns: 1fr  ;
+  }
+  .result-content .image img{
+    height: 280px;
+  }
+}
+
+
+
